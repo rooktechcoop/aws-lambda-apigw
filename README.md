@@ -56,5 +56,5 @@ To enable CORs set the flag to true.
 
 ## Examples
 
-* [lambda-basic](https://github.com/martincastrocm/aws-lambda-apigw/tree/master/examples/lambda-basic)
-* [lambda-apigw-integration](https://github.com/martincastrocm/aws-lambda-apigw/tree/master/examples/lambda-apigw-integration)
+* [lambda-basic](https://github.com/rooktechcoop/aws-lambda-apigw/tree/master/examples/lambda-basic)
+* [lambda-apigw-integration](https://github.com/rooktechcoop/aws-lambda-apigw/tree/master/examples/lambda-apigw-integration)
