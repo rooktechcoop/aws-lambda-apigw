@@ -159,16 +159,6 @@ resource "aws_api_gateway_integration" "integration" {
   uri                     = aws_lambda_function.lambda.invoke_arn
 }
 
-
-resource "aws_api_gateway_method_response" "response" {
-  count = length(var.api_gateway_id) > 0 ? 1 : 0
-
-  rest_api_id = var.api_gateway_id
-  resource_id = length(var.api_gateway_resource_id) == 0 ? aws_api_gateway_resource.api_gateway_resource[0].id : var.api_gateway_resource_id
-  http_method = var.request_method
-  status_code = 200
-}
-
 resource "aws_api_gateway_deployment" "api_gateway_deployment" {
   count      = length(var.api_gateway_id) > 0 ? 1 : 0
   depends_on = [aws_api_gateway_integration.integration]
