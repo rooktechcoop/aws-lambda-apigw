@@ -49,6 +49,12 @@ variable "authorizer_id" {
   default     = ""
 }
 
+variable "authorizer_type" {
+  description = "Set authorizer type"
+  default     = "COGNITO_USER_POOLS"
+  type        = string
+}
+
 variable "stage_name" {
   description = "The name of the stage to be deployed"
   default     = "dev"

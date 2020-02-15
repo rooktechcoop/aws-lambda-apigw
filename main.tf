@@ -144,7 +144,7 @@ resource "aws_api_gateway_method" "api_gateway_method" {
   rest_api_id   = var.api_gateway_id
   resource_id   = length(var.api_gateway_resource_id) == 0 ? aws_api_gateway_resource.api_gateway_resource[0].id : var.api_gateway_resource_id
   http_method   = var.request_method
-  authorization = length(var.authorizer_id) > 0 ? "COGNITO_USER_POOLS" : "NONE"
+  authorization = length(var.authorizer_id) > 0 ? var.authorizer_type : "NONE"
   authorizer_id = length(var.authorizer_id) > 0 ? var.authorizer_id : ""
 }
 
