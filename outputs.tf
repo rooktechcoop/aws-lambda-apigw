@@ -23,6 +23,11 @@ output "lambda_role_name" {
   value       = aws_iam_role.lambda_role.name
 }
 
+output "lambda_name" {
+  description = "The name of the lambda"
+  value       = aws_lambda_function.lambda.function_name 
+}
+
 output "aws_api_gateway_resource_id" {
   description = "The id of the api gateway resource"
   value       = concat(aws_api_gateway_resource.api_gateway_resource.*.id, [""])[0]
