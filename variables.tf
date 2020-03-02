@@ -94,6 +94,12 @@ variable "tags" {
   default = null
 }
 
+variable "lambda_layers" {
+  description = "The ARNs of lambda layers"
+  type        = list(string)
+  default     = null
+}
+
 # -----------------------------------------------------------------------------
 # Variables: CORS-related
 # -----------------------------------------------------------------------------
