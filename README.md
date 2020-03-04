@@ -29,6 +29,7 @@ To enable CORs set the flag to true.
 | lambda\_handler| Lambda handler, e.g: `lambda_function.lambda_handler` | string | `-` | yes |
 | lambda\_runtime| Lambda runtime, e.g: `python3.8` | string | `-` | yes |
 | lambda\_policy\_arn| A list of policie's arn to attach to your lambda role | list(string) | `-` | yes |
+| lambda\_layers| Dictionary of lambda layers arns | list | `null` | no |
 | api\_gateway\_id | If lambda API gateway is desired, then the id of the rest api | string | ` ` | no |
 | api\_gateway\_root\_resource\_id | If API gateway is desired, then the parent resource id of the of the rest api | string | ` ` | no |
 | resource\_path | If you want to create a new resource to your method, then the path to it | string | `path` | no |
