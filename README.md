@@ -53,6 +53,7 @@ To enable CORs set the flag to true.
 | lambda\_role\_id | ID of the lambda role|
 | lambda\_role\_name | Name of the lambda role|
 | lambda\_name | Name of the lambda|
+| lambda\_invoke\_uri\_arn | ARN of the lambda invoke uri ARN|
 | aws\_api\_gateway\_resource\_id | If created, the api gateway resource id|
 | aws\_api\_gateway\_resource\_path | If created, the the api gateway resource path |
 
