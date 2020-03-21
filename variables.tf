@@ -88,6 +88,11 @@ variable "tags" {
   default = null
 }
 
+variable "timeout" {
+  description = "The amount of time your Lambda Function has to run in seconds. Defaults to 3."
+  default     = 3
+}
+
 # -----------------------------------------------------------------------------
 # Variables: CORS-related
 # -----------------------------------------------------------------------------
