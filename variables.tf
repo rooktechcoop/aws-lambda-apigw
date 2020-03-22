@@ -94,6 +94,11 @@ variable "tags" {
   default = null
 }
 
+variable "timeout" {
+  description = "The amount of time your Lambda Function has to run in seconds. Defaults to 3."
+  default     = 3
+}
+
 variable "lambda_layers" {
   description = "The ARNs of lambda layers"
   type        = list(string)

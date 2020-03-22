@@ -68,15 +68,16 @@ data "archive_file" "lambda_zip" {
 }
 
 resource "aws_lambda_function" "lambda" {
-  filename         = "${var.lambda_function_name}.zip"
-  source_code_hash = data.archive_file.lambda_zip.output_base64sha256
-  function_name    = var.lambda_function_name
-  role             = aws_iam_role.lambda_role.arn
-  description      = var.lambda_description
-  handler          = var.lambda_handler
-  runtime          = var.lambda_runtime
-  tags             = var.tags
-  layers           = var.lambda_layers
+  filename          = "${var.lambda_function_name}.zip"
+  source_code_hash  = data.archive_file.lambda_zip.output_base64sha256
+  function_name     = var.lambda_function_name
+  role              = aws_iam_role.lambda_role.arn
+  description       = var.lambda_description
+  handler           = var.lambda_handler
+  runtime           = var.lambda_runtime
+  tags              = var.tags
+  timeout           = var.timeout
+  layers  ,         = var.lambda_layers
 
   dynamic "environment" {
     for_each = var.environment == null ? [] : [var.environment]
